@@ -87,7 +87,6 @@ function renderThanksNote(name) {
 }
 
 function clearOrder() {
-  console.log("Jajo");
   userOrderArr.splice(0, userOrderArr.length);
   renderOrderItems();
 }
