@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/94c6b03b84.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>Restaurant ordering app</title>
+  </head>
+  <body>
+    <header>
+      <div class="banner-text">
+        <h1>Jimmy's Dinner</h1>
+        <p>The best burgers and pizzas in town.</p>
+      </div>
+    </header>
+    <main>
+      <div class="menu-container" id="menu-container">
+        <!-- inserted by JS -->
+      </div>
+      <div class="order-container hidden" id="order-container">
+        <h3>Your order</h3>
+        <div id="order-items-container">
+          <!-- inserted by js -->
+        </div>
+        <div class="order-total-price">
+          <p>Total price:</p>
+          <p id="order-total-price-num">$0</p>
+        </div>
+        <button id="complete-btn">Complete order</button>
+      </div>
+      <div class="thanks-note hidden" id="thanks-note">
+        <p>
+          <!-- inserted by js -->
+        </p>
+      </div>
+      <div class="payment-modal hidden" id="payment-modal">
+        <form class="payment-modal-inner" id="payment-form">
+          <h4>Enter card details</h4>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            required
+            id="client-name"
+          />
+          <input
+            type="text"
+            placeholder="Enter card number"
+            pattern="^\d{12,18}$"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Enter CVV"
+            pattern="^\d{3,4}"
+            required
+          />
+          <button>Pay</button>
+        </form>
+      </div>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
